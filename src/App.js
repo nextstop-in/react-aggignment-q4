@@ -13,12 +13,9 @@ function App() {
   const [user, setUser] = useState({
     fname: "",
     lname: "",
-
     nameErr: "",
     organization: "",
-    organizationErr: "",
     title: "",
-    titleErr: "",
     email: "",
     emailErr: "",
     phone: "",
@@ -118,10 +115,8 @@ function App() {
                 value={user.fname}
                 placeholder="firstname"
                 onChange={(e) => handleChange(e)}
-                className={user.nameErr && "err"}
                 required
               />
-              {user.nameErr && <h5>{user.nameErr}</h5>}
             </span>
             <span>
               <input
@@ -130,10 +125,7 @@ function App() {
                 value={user.lname}
                 placeholder="lastname"
                 onChange={(e) => handleChange(e)}
-                className={user.nameErr && "err"}
               />
-
-              {user.nameErr && <h5>{user.nameErr}</h5>}
             </span>
           </div>
         </div>
@@ -147,9 +139,7 @@ function App() {
             placeholder="organization"
             required
             onChange={(e) => handleChange(e)}
-            className={user.organizationErr && "err"}
           />
-          {user.organizationErr && <h5>{user.organizationErr}</h5>}
         </div>
 
         <div className="address">
@@ -161,14 +151,11 @@ function App() {
             placeholder="title"
             required
             onChange={(e) => handleChange(e)}
-            className={user.titleErr && "err"}
           />
-          {user.titleErr && <h5>{user.titleErr}</h5>}
         </div>
 
         <div className="address">
           <label>Email : </label>
-
           <input
             type="text"
             name="email"
@@ -194,9 +181,9 @@ function App() {
           />
           {user.phoneErr && <h5>{user.phoneErr}</h5>}
         </div>
+
         <div className="address">
           <label for="address">Address : </label>
-
           <input
             type="text"
             name="streetA"
@@ -257,11 +244,10 @@ function App() {
                 />
               </span>
               <span>
-                <select
-                  className="country"
-                  onChange={(e) => handleChange(e)}
-                  required
-                >
+                <select className="country" onChange={(e) => handleChange(e)}>
+                  <option disabled="disabled" selected>
+                    Select Country
+                  </option>
                   {user.countryList.map((country) => (
                     <option
                       className="option"
