@@ -1,3 +1,29 @@
+I have implemented {useState, useEffects} hooks, to manage state
+axios to post data to server using jsonplaceholder api
+Regular Expression to validate email and phone
+*
+*
+*
+Future implementation of the App:
+
+{useState} has to be splitted into other {useState} for various user inputs(name/organization/title etc)
+as {useState} behaves diffrently(overrides) than (setState) while setting any state value 
+
+As this is test App so I have tried to add all the user inputs in single state.
+
+or we can use {useReducer} to manage state in this project.
+
+App.js can be split into other components
+
+Zip can be validated same as phone number
+ 
+SASS can be used for styling (replacing css)
+*
+*
+*
+*
+*
+*
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
